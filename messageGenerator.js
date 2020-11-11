@@ -1,11 +1,11 @@
 //// This is a Fortune Telling Bot 
 // please add more words to the arrays :)
-let subjects = ['You','Your Mom', 'Your friends', 'Your family','Your life'];
-let adverbs = ['scantily','ignorantly','sadly','smartly','ideally','quirkily','shamelessly','forlournly','unfortunately','fortunately'];
-let verbs = ['bask in','take your', 'sieze the', 'fail your','eat all of the','die by','run from the', 'smile at the',
-            'hate your','love your','escape from','leave the','climb the','ruin the','command the', 'gaze at the','be full of','fart on','crush the'];
-let objects = ['sunshine and rainbows','poop','sharks','candy','wealth','day','cake','bicycle','car','White House','plants','dogs','cats','love','life','loss','horses',
-            'pickles','pottery','outer space','patriarchy']
+let subjects = ['You','Your Mom', 'Your friends', 'Your family','Your life','The world','Everyone', 'No one','Your dog'];
+let adverbs = ['scantily','ignorantly','sadly','smartly','ideally','quirkily','shamelessly','forlournly','unfortunately','fortunately','ultimately','insanely','abhorrently','lovingly','amazingly','triumphantly'];
+let verbs = ['bask in','take your', 'sieze the', 'fail your','eat all of the','die by','run from the', 'smile at the','save the',
+            'hate your','love your','escape from the','leave the','climb the','ruin the','command the','ruin the','mourn the', 'gaze at the','be full of','fart on the','crush the','poop on the','become','reject the'];
+let objects = ['sunshine and rainbows','poop','sharks','candy','wealth','day','cake','bicycle','car','politics','plants','dogs','cats','love','life','horses','bisexuals',
+            'pickles','pottery','outer space','patriarchy','environment','vibes','capitalism','failure']
 
 
 const getRandomSubject = () => {
@@ -32,5 +32,10 @@ const getRandomPhrase = () => {
     return `${subject} will ${adverb} ${verb} ${object}`;
 };
 
-console.log(getRandomPhrase());
+let fortuneButton = document.querySelector('button');
 
+fortuneButton.onclick = () => {
+  let newFortune = getRandomPhrase();
+
+  document.getElementById('fortune-result').innerHTML = newFortune;
+}
