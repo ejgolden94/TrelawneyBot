@@ -25,6 +25,10 @@ body {
     background-color: #3d2280;
     color: white;
   }
+
+  button:focus{
+    outline:none;
+  }
   
   p {
     font-size: 18px;
