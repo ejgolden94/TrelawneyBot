@@ -6,7 +6,7 @@ let verbs = ['bask in','take your', 'sieze the', 'fail your','eat all of the','d
             'hate your','love your','escape from the','leave the','climb the','ruin the','command the','ruin the','mourn the', 'gaze at the','be full of','fart on the','crush the','poop on the','become','reject the'];
 let objects = ['sunshine and rainbows','poop','sharks','candy','wealth','day','cake','bicycle','car','politics','plants','dogs','cats','love','life','horses','bisexuals',
             'pickles','pottery','outer space','patriarchy','environment','vibes','capitalism','failure','carpet']
-
+let fortuneTold = false;
 
 const getRandomSubject = () => {
     return subjects[Math.floor(Math.random()*subjects.length)];
@@ -35,7 +35,9 @@ const getRandomPhrase = () => {
 let fortuneButton = document.querySelector('button');
 
 fortuneButton.onclick = () => {
-  let newFortune = getRandomPhrase();
-
-  document.getElementById('fortune-result').innerHTML = newFortune;
-}
+    if (!fortuneTold) {
+      let newFortune = getRandomPhrase();
+      document.getElementById('fortune-result').innerHTML = newFortune;
+    }
+    fortuneTold = true;
+  }
