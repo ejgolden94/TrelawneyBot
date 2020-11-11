@@ -1,0 +1,45 @@
+//// This is a Fortune Telling Bot 
+//sentence structure?
+/// you will get eaten by a shark 
+// you won't pass your exams 
+// your days will be full of sunshine and rainbows
+// life is a box of chocolates
+// subject 
+// verb
+// object
+// adj/adv?
+
+let subjects = ['You','Your Mom', 'Your Friends', 'Your Family','Your life'];
+let adverbs = ['scantily','ignorantly','sadly','smartly','ideally','quirkily','shamelessly','forlournly'];
+let verbs = ['bask in','take your', 'sieze the', 'fail your','eat all of the','die by','run from the',
+            'hate your','love your','escape from','leave the','climb the','ruin the','command the', 'gaze at the','be full of'];
+let objects = ['sunshine and rainbows','poop','sharks','candy','wealth','day','cake','bicycle','car','White House','plants','dogs','cats','love','life','loss','horses',
+            'pickles','pottery','outer space']
+
+
+const getRandomSubject = () => {
+    return subject[Math.floor(Math.random())*subject.length]
+};
+
+const getRandomAdverb = () => {
+    return adverbs[Math.floor(Math.random())*adverbs.length]
+};
+
+const getRandomVerb = () => {
+    return verbs[Math.floor(Math.random())*verbs.length]
+};
+
+const getRandomObjects = () => {
+    return objects[Math.floor(Math.random())*objects.length]
+};
+
+const getRandomPhrase = () => {
+    let subject = getRandomSubject();
+    let adverb = getRandomAdverd();
+    let verb = getRandomVerb();
+    let object = getRandomObject();
+    return `${subject} will ${adverb} ${verb} ${object}`
+};
+
+console.log(getRandomPhrase());
+
